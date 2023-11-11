@@ -1,4 +1,9 @@
 ﻿#include <iostream>
+#define _USE_MATH_DEFINES // for C++
+#include <math.h>
+
+
+
 using namespace std;
 
 void task1()
@@ -37,7 +42,22 @@ void task1()
 
 void task2()
 {
-	
+    double course, moneyCount;
+    cout << "Введите курс рубля к доллару: ";
+    cin >> course;
+    cout << "Введите количество долларов: ";
+    cin >> moneyCount;
+    double final = course * moneyCount;
+    cout << "Количество полученых рублей: " << final << endl;
+}
+
+void task3()
+{
+    double radius;
+    cout << "Введите радиус круга: ";
+    cin >> radius;
+    cout << M_PI * pow(radius, 2) << endl;
+    
 }
 
 int main()
@@ -48,7 +68,6 @@ int main()
     task1();
     cout << "Задание 2: Напишите программу обмена валют: программа запрашивает текущий курс доллара, например, к рублю, и количество единиц (рублей) для конвертации и выводит в консоль сконвертированную сумму в долларах." << endl;
     task2();
-    
-    
-    
+    cout << "Задание 3: Напишите программу, которая запрашивает у пользователя радиус круга и, используя полученный радиус, вычисляет площадь круга." << endl;
+    task3();
 }
